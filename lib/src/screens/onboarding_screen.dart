@@ -27,6 +27,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     setState(() {
       _currentPosition = _validatePosition(position.toDouble());
     });
+    print("_currentPosition: $_currentPosition");
   }
 
   @override
@@ -82,7 +83,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               Align(
                 alignment: Alignment.bottomCenter,
                 child: Container(
-                  margin: const EdgeInsets.only(top: 5),
+                  margin: const EdgeInsets.only(bottom: 30),
                   width: width,
                   height: 10,
                   alignment: Alignment.center,
@@ -90,14 +91,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
                     physics: const NeverScrollableScrollPhysics(),
-                    itemCount: _totalDots - 1,
+                    itemCount: _totalDots,
                     itemBuilder: (context, index) {
                       return Container(
                         width: 10,
-                        margin: const EdgeInsets.symmetric(horizontal: 2),
+                        margin: const EdgeInsets.symmetric(horizontal: 5),
                         decoration: BoxDecoration(
                           color: _currentPosition == index
-                              ? Colors.grey.shade500
+                              ? Colors.white
                               : Colors.grey.shade300,
                           borderRadius: BorderRadius.circular(30),
                         ),
@@ -106,8 +107,31 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   ),
                 ),
               ),
+              _currentPosition == 2 ? showButton(width) : Container(),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget showButton(double width) {
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Container(
+        margin: const EdgeInsets.only(bottom: 80),
+        width: width * 0.5,
+        height: 45,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+            border: Border.all(width: 3, color: Colors.white),
+            borderRadius: BorderRadius.circular(4)),
+        child: Text(
+          "Get started",
+          style: Theme.of(context)
+              .textTheme
+              .displayMedium!
+              .copyWith(fontWeight: FontWeight.w600, height: 1),
         ),
       ),
     );

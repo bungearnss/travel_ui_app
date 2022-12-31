@@ -16,10 +16,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        textTheme: TextTheme(
-          displayMedium: TextStyle(
-            color: Colors.white,
-          ),
+        textTheme: const TextTheme(
+          displayMedium:
+              TextStyle(color: Colors.white, fontSize: 17, height: 1.7),
         ),
       ),
       home: const OnBoardingScreen(),

@@ -17,8 +17,7 @@ class OnBoardbody extends StatelessWidget {
             width: width * 0.8,
             child: Text(
               text,
-              style: const TextStyle(
-                  color: Colors.white, fontSize: 17, height: 1.7),
+              style: Theme.of(context).textTheme.displayMedium,
             ),
           ),
         ),
