@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_ui_app/src/screens/destination_screen.dart';
 import 'package:travel_ui_app/src/utils/text_utils.dart';
 
 import '../utils/constants/colors.dart';
@@ -32,10 +33,18 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
+  goToDestinations() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: ((context) => const DestinationScreen()),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
     FocusScopeNode currentFocus = FocusScope.of(context);
     return Scaffold(
       body: SingleChildScrollView(
@@ -148,7 +157,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               SizedBox(height: height * 0.08),
-              const CustomButton(title: "Login"),
+              CustomButton(title: "Login", onPressed: goToDestinations),
               const SizedBox(height: 15),
               Text(
                 TextUtils.signUp,
