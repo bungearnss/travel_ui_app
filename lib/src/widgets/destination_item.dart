@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import '../models/destinations.dart';
 
 class DestinationItem extends StatelessWidget {
-  Destinations destinations;
-  DestinationItem({super.key, required this.destinations});
+  final Destinations destinations;
+  const DestinationItem({super.key, required this.destinations});
 
   @override
   Widget build(BuildContext context) {

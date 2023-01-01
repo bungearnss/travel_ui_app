@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-PreferredSize? appBar(String title, void Function()? onPressed) {
+PreferredSize? appBar(
+    String title, void Function()? onPressed, String? pageType) {
   return PreferredSize(
-    preferredSize: const Size.fromHeight(25),
+    preferredSize: const Size.fromHeight(30),
     child: AppBar(
       elevation: 0,
       backgroundColor: Colors.transparent,
@@ -17,6 +18,16 @@ PreferredSize? appBar(String title, void Function()? onPressed) {
           ),
         ),
       ),
+      leading: pageType == "detail"
+          ? IconButton(
+              icon: const Icon(
+                Icons.arrow_back_ios,
+                color: Colors.white,
+                size: 22,
+              ),
+              onPressed: onPressed,
+            )
+          : null,
     ),
   );
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import './src/screens/onboarding_screen.dart';
 import './src/screens/destination_screen.dart';
 
 void main() {
@@ -13,6 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute: '/onboarding',
+      routes: {
+        '/onboarding': ((context) => const OnBoardingScreen()),
+        '/destination': ((context) => const DestinationScreen()),
+      },
       theme: ThemeData(
         textTheme: const TextTheme(
           displayMedium:
@@ -26,7 +32,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const DestinationScreen(),
+      // home: const DestinationScreen(),
     );
   }
 }
