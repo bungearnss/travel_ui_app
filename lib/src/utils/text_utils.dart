@@ -6,4 +6,6 @@ class TextUtils {
       "Flexibe payment : credit card and transfer";
   static const String onboarding_3 =
       "Enjoy youre travel experience without the stress of your plan. Get the world best experient according to the place you go.";
+  static const String signUp = "Don't have an account?";
+  static const String forgetPass = "forget password?";
 }

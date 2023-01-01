@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:travel_ui_app/src/screens/login_screen.dart';
 
 import '../utils/text_utils.dart';
 import '../components/onboard_body.dart';
@@ -27,7 +28,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     setState(() {
       _currentPosition = _validatePosition(position.toDouble());
     });
-    print("_currentPosition: $_currentPosition");
   }
 
   @override
@@ -46,7 +46,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return AnimatedSwitcher(
       duration: const Duration(milliseconds: 2000),
@@ -116,22 +115,32 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   }
 
   Widget showButton(double width) {
-    return Align(
-      alignment: Alignment.bottomCenter,
-      child: Container(
-        margin: const EdgeInsets.only(bottom: 80),
-        width: width * 0.5,
-        height: 45,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-            border: Border.all(width: 3, color: Colors.white),
-            borderRadius: BorderRadius.circular(4)),
-        child: Text(
-          "Get started",
-          style: Theme.of(context)
-              .textTheme
-              .displayMedium!
-              .copyWith(fontWeight: FontWeight.w600, height: 1),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: ((context) => const LoginScreen()),
+          ),
+        );
+      },
+      child: Align(
+        alignment: Alignment.bottomCenter,
+        child: Container(
+          margin: const EdgeInsets.only(bottom: 80),
+          width: width * 0.5,
+          height: 45,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              border: Border.all(width: 3, color: Colors.white),
+              borderRadius: BorderRadius.circular(4)),
+          child: Text(
+            "Get started",
+            style: Theme.of(context)
+                .textTheme
+                .displayMedium!
+                .copyWith(fontWeight: FontWeight.w600, height: 1),
+          ),
         ),
       ),
     );
