@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-PreferredSize? appBar(String title, void Function()? onPressed, bool isBack) {
+PreferredSize? appBar(
+    String title, void Function()? onPressed, bool isBack, bool isShare) {
   return PreferredSize(
     preferredSize: const Size.fromHeight(30),
     child: AppBar(
@@ -27,6 +28,18 @@ PreferredSize? appBar(String title, void Function()? onPressed, bool isBack) {
               onPressed: onPressed,
             )
           : null,
+      actions: [
+        isShare == true
+            ? IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.ios_share_sharp,
+                  color: Colors.white,
+                  size: 24,
+                ),
+              )
+            : Container(),
+      ],
     ),
   );
 }

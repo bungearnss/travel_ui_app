@@ -20,7 +20,7 @@ class _PlaceDetailScreenState extends State<PlaceDetailScreen> {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: appBar("", () => CommonUtils.goBack(context), true),
+      appBar: appBar("", () => CommonUtils.goBack(context), true, true),
       extendBodyBehindAppBar: true,
       body: SingleChildScrollView(
         child: Column(
