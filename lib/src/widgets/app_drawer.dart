@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/constants/colors.dart';
+import '../screens/profile_screen.dart';
 
 class AppDrawer extends StatelessWidget {
   AppDrawer({super.key});
@@ -25,15 +26,27 @@ class AppDrawer extends StatelessWidget {
             itemCount: _list.length,
             itemBuilder: ((context, index) {
               final item = _list[index];
-              return Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 30.0, vertical: 10.0),
-                child: Text(
-                  item,
-                  style: Theme.of(context)
-                      .textTheme
-                      .displayMedium!
-                      .copyWith(fontSize: 23),
+              return GestureDetector(
+                onTap: () {
+                  if (index == 4) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: ((context) => const ProfileScreen()),
+                      ),
+                    );
+                  }
+                },
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 30.0, vertical: 10.0),
+                  child: Text(
+                    item,
+                    style: Theme.of(context)
+                        .textTheme
+                        .displayMedium!
+                        .copyWith(fontSize: 22),
+                  ),
                 ),
               );
             }),
