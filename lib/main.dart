@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:travel_ui_app/src/utils/constants/colors.dart';
 
-import './src/screens/onboarding_screen.dart';
+import './src/screens/place_detail_screen.dart';
 import './src/screens/destination_screen.dart';
 
 void main() {
@@ -14,11 +15,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/onboarding',
-      routes: {
-        '/onboarding': ((context) => const OnBoardingScreen()),
-        '/destination': ((context) => const DestinationScreen()),
-      },
       theme: ThemeData(
         textTheme: const TextTheme(
           displayMedium:
@@ -30,9 +26,15 @@ class MyApp extends StatelessWidget {
             height: 1.7,
             fontWeight: FontWeight.bold,
           ),
+          headlineLarge: TextStyle(
+            color: AppColors.headColor,
+            fontSize: 18,
+            height: 1.7,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
-      // home: const DestinationScreen(),
+      home: const DestinationScreen(),
     );
   }
 }

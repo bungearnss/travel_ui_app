@@ -39,10 +39,10 @@ class DestinationItem extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Icon(
-                            Icons.location_on_rounded,
-                            color: Colors.white,
-                            size: 13,
+                          Image.asset(
+                            "assets/icons/location-pin.png",
+                            width: 10,
+                            height: 10,
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 5.0),
@@ -58,10 +58,10 @@ class DestinationItem extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          const Icon(
-                            Icons.timer_outlined,
-                            color: Colors.white,
-                            size: 13,
+                          Image.asset(
+                            "assets/icons/clock.png",
+                            width: 10,
+                            height: 10,
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 5.0),

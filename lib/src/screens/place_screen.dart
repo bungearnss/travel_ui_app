@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:travel_ui_app/src/screens/place_detail_screen.dart';
 
 import '../models/destinations.dart';
 import '../widgets/appbar.dart';
 import '../widgets/destination_item.dart';
 import '../widgets/place_item.dart';
 import '../utils/constants/mock_data.dart';
+import '../utils/common_utils.dart';
 
 class PlaceScreen extends StatefulWidget {
   final Destinations destinations;
@@ -21,10 +23,6 @@ String _appTitle(String txt) {
   return title;
 }
 
-_goBack(BuildContext context) {
-  Navigator.popAndPushNamed(context, '/destination');
-}
-
 class _PlaceScreenState extends State<PlaceScreen> {
   @override
   Widget build(BuildContext context) {
@@ -32,7 +30,7 @@ class _PlaceScreenState extends State<PlaceScreen> {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: appBar(_appTitle(widget.destinations.name),
-          () => _goBack(context), "detail"),
+          () => CommonUtils.goBack(context), true),
       extendBodyBehindAppBar: true,
       body: Column(
         children: [
@@ -49,8 +47,18 @@ class _PlaceScreenState extends State<PlaceScreen> {
               itemCount: placeList.length,
               itemBuilder: (context, index) {
                 final item = placeList[index];
-                return PlaceItem(
-                  places: item,
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              PlaceDetailScreen(places: item)),
+                    );
+                  },
+                  child: PlaceItem(
+                    places: item,
+                  ),
                 );
               },
             ),

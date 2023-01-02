@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-PreferredSize? appBar(
-    String title, void Function()? onPressed, String? pageType) {
+PreferredSize? appBar(String title, void Function()? onPressed, bool isBack) {
   return PreferredSize(
     preferredSize: const Size.fromHeight(30),
     child: AppBar(
@@ -18,7 +17,7 @@ PreferredSize? appBar(
           ),
         ),
       ),
-      leading: pageType == "detail"
+      leading: isBack == true
           ? IconButton(
               icon: const Icon(
                 Icons.arrow_back_ios,
