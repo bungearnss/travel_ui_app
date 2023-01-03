@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_ui_app/src/utils/common_utils.dart';
 
 class OnBoardbody extends StatelessWidget {
   final String text;
@@ -6,15 +7,13 @@ class OnBoardbody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
     return Stack(
       children: [
         Positioned(
-          bottom: height * 0.25,
-          left: width * 0.11,
+          bottom: CommonUtils.getDeviceHeight(context) * 0.25,
+          left: CommonUtils.getDeviceWidth(context) * 0.11,
           child: SizedBox(
-            width: width * 0.8,
+            width: CommonUtils.getDeviceWidth(context) * 0.8,
             child: Text(
               text,
               style: Theme.of(context).textTheme.displayMedium,

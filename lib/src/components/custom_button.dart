@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_ui_app/src/utils/common_utils.dart';
 
 import '../utils/constants/colors.dart';
 
@@ -9,13 +10,12 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
     return GestureDetector(
       onTap: onPressed,
       child: Container(
         alignment: Alignment.center,
         margin: const EdgeInsets.symmetric(horizontal: 30.0),
-        width: width,
+        width: CommonUtils.getDeviceWidth(context),
         height: 55,
         decoration: BoxDecoration(
           color: AppColors.primaryColor,
