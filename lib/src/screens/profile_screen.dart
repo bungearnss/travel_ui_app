@@ -27,9 +27,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
-
     final List<String> infoList = [
       userProfile.post.toString(),
       userProfile.like.toString(),
@@ -72,8 +69,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Column(
               children: [
                 SizedBox(
-                  width: width,
-                  height: height * 0.58,
+                  width: CommonUtils.getDeviceWidth(context),
+                  height: CommonUtils.getDeviceHeight(context) * 0.58,
                   child: Stack(
                     fit: StackFit.expand,
                     children: [
@@ -126,7 +123,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         itemCount: infoList.length,
                         itemBuilder: (context, index) {
                           return SizedBox(
-                            width: width * 0.25,
+                            width: CommonUtils.getDeviceWidth(context) * 0.25,
                             child: GestureDetector(
                               onTap: () {
                                 _onPressed(index);

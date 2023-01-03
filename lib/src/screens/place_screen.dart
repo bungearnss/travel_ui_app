@@ -26,8 +26,6 @@ String _appTitle(String txt) {
 class _PlaceScreenState extends State<PlaceScreen> {
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: appBar(_appTitle(widget.destinations.name),
           () => CommonUtils.goBack(context), true, Container()),
@@ -35,14 +33,14 @@ class _PlaceScreenState extends State<PlaceScreen> {
       body: Column(
         children: [
           SizedBox(
-            width: width,
-            height: height * 0.4,
+            width: CommonUtils.getDeviceWidth(context),
+            height: CommonUtils.getDeviceHeight(context) * 0.4,
             child: DestinationItem(
               destinations: destinationList[0],
             ),
           ),
           SizedBox(
-            height: height * 0.6,
+            height: CommonUtils.getDeviceHeight(context) * 0.6,
             child: ListView.builder(
               padding: const EdgeInsets.only(top: 10),
               itemCount: placeList.length,

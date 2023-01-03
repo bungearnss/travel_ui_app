@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:travel_ui_app/src/screens/login_screen.dart';
+import 'package:travel_ui_app/src/utils/common_utils.dart';
 
 import '../utils/text_utils.dart';
 import '../components/onboard_body.dart';
@@ -46,7 +47,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
     return AnimatedSwitcher(
       duration: const Duration(milliseconds: 2000),
       child: Scaffold(
@@ -83,7 +83,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 alignment: Alignment.bottomCenter,
                 child: Container(
                   margin: const EdgeInsets.only(bottom: 30),
-                  width: width,
+                  width: CommonUtils.getDeviceWidth(context),
                   height: 10,
                   alignment: Alignment.center,
                   child: ListView.builder(
@@ -106,7 +106,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   ),
                 ),
               ),
-              _currentPosition == 2 ? showButton(width) : Container(),
+              _currentPosition == 2
+                  ? showButton(CommonUtils.getDeviceWidth(context))
+                  : Container(),
             ],
           ),
         ),

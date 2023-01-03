@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_ui_app/src/screens/destination_screen.dart';
+import 'package:travel_ui_app/src/utils/common_utils.dart';
 import 'package:travel_ui_app/src/utils/text_utils.dart';
 
 import '../utils/constants/colors.dart';
@@ -44,12 +45,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
     FocusScopeNode currentFocus = FocusScope.of(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          height: height,
+          height: CommonUtils.getDeviceHeight(context),
           color: AppColors.themeColor,
           child: Column(
             children: [
@@ -156,7 +156,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: height * 0.08),
+              SizedBox(height: CommonUtils.getDeviceHeight(context) * 0.08),
               CustomButton(title: "Login", onPressed: goToDestinations),
               const SizedBox(height: 15),
               Text(

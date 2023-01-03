@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_ui_app/src/utils/common_utils.dart';
 
 import '../utils/constants/colors.dart';
 import '../screens/profile_screen.dart';
@@ -17,7 +18,6 @@ class AppDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
     return Drawer(
       backgroundColor: AppColors.drawerColor,
       child: Stack(
@@ -55,7 +55,7 @@ class AppDrawer extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             child: Container(
               alignment: Alignment.center,
-              width: width,
+              width: CommonUtils.getDeviceWidth(context),
               height: 55,
               color: AppColors.primaryColor,
               child: Row(

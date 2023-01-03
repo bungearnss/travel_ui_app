@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:travel_ui_app/src/utils/common_utils.dart';
 
 import '../utils/image_utils.dart';
 import '../utils/constants/colors.dart';
@@ -11,11 +12,10 @@ class LikeItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Container(
-        width: width,
+        width: CommonUtils.getDeviceWidth(context),
         height: 110,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(3),
