@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:travel_ui_app/src/utils/text_utils.dart';
 
 import '../widgets/appbar.dart';
 import '../utils/constants/mock_data.dart';
@@ -35,10 +36,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
     ];
 
     final List<String> infoDescriptionList = [
-      "Posts",
-      "Likes",
-      "Followers",
-      "Following",
+      TextUtils.post,
+      TextUtils.like,
+      TextUtils.follower,
+      TextUtils.following,
     ];
     TextStyle amountStyle = Theme.of(context)
         .textTheme
@@ -50,7 +51,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         .copyWith(height: 0, fontWeight: FontWeight.w500);
     return Scaffold(
       appBar: appBar(
-        "Profile",
+        TextUtils.profile,
         () => CommonUtils.goBack(context),
         true,
         IconButton(
@@ -173,7 +174,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Center(
       heightFactor: 5,
       child: Text(
-        "You don't have any posts yet.\nposting to share the fun!",
+        TextUtils.postEmpty,
         textAlign: TextAlign.center,
         style: Theme.of(context).textTheme.displayMedium!.copyWith(
               color: AppColors.drawerColor,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_ui_app/src/utils/common_utils.dart';
+import 'package:travel_ui_app/src/utils/text_utils.dart';
 
 import '../utils/constants/colors.dart';
 import '../screens/profile_screen.dart';
@@ -8,12 +9,12 @@ class AppDrawer extends StatelessWidget {
   AppDrawer({super.key});
 
   final List<String> _list = [
-    "Home",
-    "Locations",
-    "favorites",
-    "Wishlist",
-    "Profile",
-    "Settings",
+    TextUtils.home,
+    TextUtils.location,
+    TextUtils.favorite,
+    TextUtils.wishlist,
+    TextUtils.profile,
+    TextUtils.setting,
   ];
 
   @override

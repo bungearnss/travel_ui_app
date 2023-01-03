@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_ui_app/src/utils/text_utils.dart';
 
 import '../widgets/appbar.dart';
 import '../widgets/destination_item.dart';
@@ -18,7 +19,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(
-        "Destinations",
+        TextUtils.destinations,
         () {},
         false,
         Container(),

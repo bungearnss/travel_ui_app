@@ -137,7 +137,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               border: Border.all(width: 3, color: Colors.white),
               borderRadius: BorderRadius.circular(4)),
           child: Text(
-            "Get started",
+            TextUtils.start,
             style: Theme.of(context)
                 .textTheme
                 .displayMedium!
