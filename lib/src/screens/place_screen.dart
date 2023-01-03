@@ -30,7 +30,7 @@ class _PlaceScreenState extends State<PlaceScreen> {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: appBar(_appTitle(widget.destinations.name),
-          () => CommonUtils.goBack(context), true, false),
+          () => CommonUtils.goBack(context), true, Container()),
       extendBodyBehindAppBar: true,
       body: Column(
         children: [

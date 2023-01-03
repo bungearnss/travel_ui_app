@@ -1,5 +1,6 @@
 import '../../models/destinations.dart';
 import '../../models/places.dart';
+import '../../models/profiles.dart';
 
 final List<Destinations> destinationList = [
   Destinations(
@@ -95,3 +96,13 @@ final List<Places> placeList = [
     comments: 28,
   ),
 ];
+
+final Profiles userProfile = Profiles(
+  name: "Tunsuda Boonloed",
+  description: "Software Engineer @ Accenter Thailand",
+  pic: "https://avatars.githubusercontent.com/u/66944039?v=4",
+  post: 0,
+  like: 30,
+  follower: 25,
+  following: 60,
+);

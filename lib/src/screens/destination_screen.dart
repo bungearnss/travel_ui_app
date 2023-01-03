@@ -17,7 +17,12 @@ class _DestinationScreenState extends State<DestinationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar("Destinations", () {}, false, false),
+      appBar: appBar(
+        "Destinations",
+        () {},
+        false,
+        Container(),
+      ),
       extendBodyBehindAppBar: true,
       drawer: AppDrawer(),
       body: Column(

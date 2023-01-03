@@ -20,7 +20,19 @@ class _PlaceDetailScreenState extends State<PlaceDetailScreen> {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: appBar("", () => CommonUtils.goBack(context), true, true),
+      appBar: appBar(
+        "",
+        () => CommonUtils.goBack(context),
+        true,
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.ios_share_sharp,
+            color: Colors.white,
+            size: 24,
+          ),
+        ),
+      ),
       extendBodyBehindAppBar: true,
       body: SingleChildScrollView(
         child: Stack(
