@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:travel_ui_app/src/utils/constants/colors.dart';
 
 import '../widgets/appbar.dart';
 import '../widgets/place_header.dart';
 import '../utils/common_utils.dart';
+import '../utils/constants/colors.dart';
 import '../models/places.dart';
 
 class PlaceDetailScreen extends StatefulWidget {

@@ -1,12 +1,12 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:travel_ui_app/src/utils/text_utils.dart';
 
 import '../widgets/appbar.dart';
 import '../utils/constants/mock_data.dart';
 import '../utils/common_utils.dart';
 import '../utils/image_utils.dart';
 import '../utils/constants/colors.dart';
+import '../utils/text_utils.dart';
 
 import '../widgets/like_item.dart';
 

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:travel_ui_app/src/utils/text_utils.dart';
 
 import '../widgets/appbar.dart';
 import '../widgets/destination_item.dart';
 import '../widgets/app_drawer.dart';
 import '../screens/place_screen.dart';
 import '../utils/constants/mock_data.dart';
+import '../utils/text_utils.dart';
 
 class DestinationScreen extends StatefulWidget {
   const DestinationScreen({super.key});

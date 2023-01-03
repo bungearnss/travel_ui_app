@@ -1,12 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:travel_ui_app/src/screens/login_screen.dart';
-import 'package:travel_ui_app/src/utils/common_utils.dart';
-import 'package:travel_ui_app/src/utils/image_utils.dart';
 
 import '../utils/text_utils.dart';
+import '../utils/common_utils.dart';
+import '../utils/image_utils.dart';
 import '../components/onboard_body.dart';
+import '../screens/login_screen.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});

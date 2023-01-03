@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:travel_ui_app/src/utils/common_utils.dart';
-import 'package:travel_ui_app/src/utils/text_utils.dart';
 
 import '../utils/constants/colors.dart';
 import '../screens/profile_screen.dart';
+import '../utils/common_utils.dart';
+import '../utils/text_utils.dart';
 
 class AppDrawer extends StatelessWidget {
   AppDrawer({super.key});

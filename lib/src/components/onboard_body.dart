@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travel_ui_app/src/utils/common_utils.dart';
+
+import '../utils/common_utils.dart';
 
 class OnBoardbody extends StatelessWidget {
   final String text;

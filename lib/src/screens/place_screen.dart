@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:travel_ui_app/src/screens/place_detail_screen.dart';
 
 import '../models/destinations.dart';
 import '../widgets/appbar.dart';
@@ -7,6 +6,7 @@ import '../widgets/destination_item.dart';
 import '../widgets/place_item.dart';
 import '../utils/constants/mock_data.dart';
 import '../utils/common_utils.dart';
+import '../screens/place_detail_screen.dart';
 
 class PlaceScreen extends StatefulWidget {
   final Destinations destinations;

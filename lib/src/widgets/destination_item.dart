@@ -1,8 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:travel_ui_app/src/utils/image_utils.dart';
 
 import '../models/destinations.dart';
+import '../utils/constants/colors.dart';
+import '../utils/image_utils.dart';
 
 class DestinationItem extends StatelessWidget {
   final Destinations destinations;
@@ -21,7 +22,7 @@ class DestinationItem extends StatelessWidget {
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
             child: Container(
-              color: const Color.fromARGB(210, 50, 53, 70),
+              color: AppColors.drawerColor.withOpacity(.82),
               alignment: Alignment.center,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
