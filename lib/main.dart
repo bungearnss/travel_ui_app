@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travel_ui_app/src/utils/constants/colors.dart';
 
-import './src/screens/place_detail_screen.dart';
-import './src/screens/destination_screen.dart';
+import './src/utils/constants/colors.dart';
+import './src/screens/onboarding_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +33,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const DestinationScreen(),
+      home: const OnBoardingScreen(),
     );
   }
 }
