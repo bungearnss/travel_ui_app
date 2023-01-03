@@ -13,7 +13,7 @@ class LikeItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Container(
         width: width,
         height: 110,
@@ -44,8 +44,10 @@ class LikeItem extends StatelessWidget {
                           style: Theme.of(context)
                               .textTheme
                               .displayLarge!
-                              .copyWith(height: 1.4),
+                              .copyWith(height: 0),
                           textAlign: TextAlign.center,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                       Text(
@@ -53,7 +55,7 @@ class LikeItem extends StatelessWidget {
                         style: Theme.of(context)
                             .textTheme
                             .displayMedium!
-                            .copyWith(height: 0),
+                            .copyWith(height: 1.5),
                         textAlign: TextAlign.center,
                       ),
                     ],

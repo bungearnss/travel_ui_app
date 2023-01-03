@@ -44,6 +44,7 @@ class _PlaceScreenState extends State<PlaceScreen> {
           SizedBox(
             height: height * 0.6,
             child: ListView.builder(
+              padding: const EdgeInsets.only(top: 10),
               itemCount: placeList.length,
               itemBuilder: (context, index) {
                 final item = placeList[index];

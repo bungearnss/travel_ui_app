@@ -77,10 +77,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: Stack(
                     fit: StackFit.expand,
                     children: [
-                      Image.network(
-                        "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSOhZoM5T8WbVVaZKrF71DTnJ64poL01p2ICRRu4q1vYMzr3G4gh6A9HTZijjV-uP-xi3IbNPeVFRus4XAgnAiDaA",
-                        fit: BoxFit.cover,
-                      ),
+                      Image.network(ImageUtils.profileBg, fit: BoxFit.fill),
                       ClipRRect(
                         child: BackdropFilter(
                           filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
@@ -158,8 +155,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 10),
-                // LikeItem(places: placeList[0]),
                 showItem(_isActive),
               ],
             ),
@@ -172,7 +167,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget showItem(int index) {
     Widget show = _showPostDetail();
     if (index == 1) {
-      show = LikeItem(places: placeList[0]);
+      show = _showLikeDetail();
     }
     return show;
   }
@@ -187,6 +182,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
               color: AppColors.drawerColor,
             ),
       ),
+    );
+  }
+
+  Widget _showLikeDetail() {
+    return ListView.builder(
+      itemCount: likeList.length,
+      padding: const EdgeInsets.only(top: 10.0),
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      itemBuilder: (context, index) {
+        final item = likeList[index];
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 10.0),
+          child: LikeItem(places: item),
+        );
+      },
     );
   }
 }
