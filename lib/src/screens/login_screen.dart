@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_ui_app/src/screens/destination_screen.dart';
 import 'package:travel_ui_app/src/utils/common_utils.dart';
+import 'package:travel_ui_app/src/utils/image_utils.dart';
 import 'package:travel_ui_app/src/utils/text_utils.dart';
 
 import '../utils/constants/colors.dart';
@@ -56,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Align(
                 alignment: Alignment.center,
                 heightFactor: 2,
-                child: Image.asset("assets/images/logo.png"),
+                child: Image.asset(ImageUtils.logo),
               ),
               const SizedBox(height: 10),
               Padding(

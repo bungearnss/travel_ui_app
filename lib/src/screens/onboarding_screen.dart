@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:travel_ui_app/src/screens/login_screen.dart';
 import 'package:travel_ui_app/src/utils/common_utils.dart';
+import 'package:travel_ui_app/src/utils/image_utils.dart';
 
 import '../utils/text_utils.dart';
 import '../components/onboard_body.dart';
@@ -60,7 +61,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 Color.fromARGB(153, 164, 175, 184),
                 BlendMode.srcOver,
               ),
-              image: AssetImage("assets/images/cloud.jpg"),
+              image: AssetImage(ImageUtils.cloud),
             ),
           ),
           child: Stack(
@@ -77,7 +78,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               Align(
                 alignment: Alignment.center,
                 heightFactor: 2,
-                child: Image.asset("assets/images/logo.png"),
+                child: Image.asset(ImageUtils.logo),
               ),
               Align(
                 alignment: Alignment.bottomCenter,

@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:travel_ui_app/src/utils/image_utils.dart';
 
 import '../models/destinations.dart';
 
@@ -40,7 +41,7 @@ class DestinationItem extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
-                            "assets/icons/location-pin.png",
+                            ImageUtils.pin,
                             width: 10,
                             height: 10,
                           ),
@@ -59,7 +60,7 @@ class DestinationItem extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Image.asset(
-                            "assets/icons/clock.png",
+                            ImageUtils.clock,
                             width: 10,
                             height: 10,
                           ),

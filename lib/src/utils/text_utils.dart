@@ -1,4 +1,5 @@
 class TextUtils {
+  /* Onboarding Screen Text */
   static const String onboarding_1 =
       "Whethet it's coast or canyons, Victoria Fails or Antarctica: we're sure to have an adventure tour that suits you the best.";
   static const String onboarding_2 =
@@ -6,11 +7,11 @@ class TextUtils {
       "Flexibe payment : credit card and transfer";
   static const String onboarding_3 =
       "Enjoy youre travel experience without the stress of your plan. Get the world best experient according to the place you go.";
+  static const String start = "Get started";
 
-  /* Onboarding Part */
+  /* Login Screen Text */
   static const String signUp = "Don't have an account?";
   static const String forgetPass = "forget password?";
-  static const String start = "Get started";
 
   /* App title */
   static const String destinations = "Destinations";
