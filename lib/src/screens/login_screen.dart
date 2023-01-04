@@ -37,9 +37,9 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   goToDestinations() {
-    if (_username == "") {
+    if (_username.isEmpty) {
       _showLoginError("Username");
-    } else if (_password == "") {
+    } else if (_password.isEmpty) {
       _showLoginError("Password");
     } else {
       Navigator.push(
@@ -130,7 +130,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       color: Colors.white,
                       size: 27,
                     ),
-                    suffixIcon: _username == "" || _isEditingUserDone == true
+                    suffixIcon: _username.isEmpty || _isEditingUserDone == true
                         ? null
                         : IconButton(
                             onPressed: _usernameController.clear,
@@ -184,7 +184,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       color: Colors.white,
                       size: 27,
                     ),
-                    suffixIcon: _password == "" || _isEditingPassDone == true
+                    suffixIcon: _password.isEmpty || _isEditingPassDone == true
                         ? null
                         : IconButton(
                             onPressed: _passwordController.clear,
