@@ -12,6 +12,10 @@ class TextUtils {
   /* Login Screen Text */
   static const String signUp = "Don't have an account?";
   static const String forgetPass = "forget password?";
+  static const String userIsEmptyError = "Username can't be empty";
+  static const String userLenghtError = "Username too short";
+  static const String passIsEmptyError = "Password can't be empty";
+  static const String passLenghtError = "Password too short";
 
   /* App title */
   static const String destinations = "Destinations";
